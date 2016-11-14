@@ -1,5 +1,8 @@
 # Kirby Crash Course
 
+### Once the Server is running on PHP, access it with /panel
+
+
 ## Folder Structure
 ###Assets Folder
 This is where all the images/fonts/external files/etc go.
@@ -20,9 +23,6 @@ Obviously, plugins.
 
 ###### Templates
 Where the custom templates or others are placed
-
-
-### Once the Server is running on PHP, access it with /panel
 
 ## Creating a Template
 
@@ -114,4 +114,4 @@ Then, under the title of your `site/templates/default.php` file, insert:
 c::set('debug', true);
 ```
 
-This adds a debug feature.
+This adds a debug feature that you'll see when your code breaks. It looks a lot prettier than an error page.
