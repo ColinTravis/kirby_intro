@@ -30,16 +30,12 @@ Where the custom templates or others are placed
 
 We're going to add a p tag to it.
 
-```
-<?php echo $page->text()->kirbytext() ?>
-
+```<?php echo $page->text()->kirbytext() ?>
 ```
 
 This tells kirby to insert information from the **"text"** field that is pulled from the YAML file in blueprints. Kirbytext uses a markdown language, making it easier to format.
 
-```
-<?php echo $page->images() ?>
-
+```<?php echo $page->images() ?>
 ```
 
 Similar to the other one, this will add images.
@@ -49,8 +45,7 @@ In the _site/blueprints/default.yml_ file, you can add lines to add to the panel
 
 This is all done in yaml, so indentation is **key**
 
-```
-subtext: #can be named anything. Used to target in template file.
+```subtext: #can be named anything. Used to target in template file.
   label: Sub Text #what the panel sows
   type: textarea #the type that it is
   width: 1/2 #how big it's gonna be
@@ -69,8 +64,7 @@ By adding these, we can then reference them in the default.php and make sure con
 
 [Kirby Cookbook](https://getkirby.com/docs/cookbook"Kirby Cookbook")
 
-```
-c::set('debug', true);
+```c::set('debug', true);
  ```
 
 This adds a debug feature.
