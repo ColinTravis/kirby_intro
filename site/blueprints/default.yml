@@ -17,3 +17,11 @@ fields:
     type: date
     width: 1/2
     default: today
+  featureimage:
+    label: Feature Image
+    type: select
+    options: query
+    query:
+      fetch: images
+      value: '{{filename}}'
+      text: '{{filename}}'

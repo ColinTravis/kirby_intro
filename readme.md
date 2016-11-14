@@ -30,22 +30,35 @@ Where the custom templates or others are placed
 
 We're going to add a p tag to it.
 
-```<?php echo $page->text()->kirbytext() ?>
+```php
+<?php echo $page->text()->kirbytext() ?>
 ```
 
 This tells kirby to insert information from the **"text"** field that is pulled from the YAML file in blueprints. Kirbytext uses a markdown language, making it easier to format.
 
-```<?php echo $page->images() ?>
+```php
+<?php echo $page->images() ?>
 ```
 
 Similar to the other one, this will add images.
+
+But! We can also add feature images easily.
+
+<?php echo $page->featureImage() ?>
+
+<!-- Featured Image (Gets a specific image from the page. The image is the filename that is placed into the code, and the filename of course comes from the panel.) -->
+##### YAML example <a id="yaml"></a>](#featureimage)
+<?php echo $page->image($page->featureImage() ) ?>
+
+<img src="<?php echo $page->image($page->featureImage())->url() ?>" alt="a feature image" />
 
 ## Adding things to the panel
 In the _site/blueprints/default.yml_ file, you can add lines to add to the panel.
 
 This is all done in yaml, so indentation is **key**
 
-```subtext: #can be named anything. Used to target in template file.
+```yaml
+subtext: #can be named anything. Used to target in template file.
   label: Sub Text #what the panel sows
   type: textarea #the type that it is
   width: 1/2 #how big it's gonna be
@@ -55,8 +68,21 @@ date:
   width: 1/2
   default: today
 ```
+
 By adding these, we can then reference them in the default.php and make sure content is added.
 
+##### [Here's a Way We Can Add the Option to Select Feature images <a id="featureimage"></a>](#yaml)
+
+```yaml
+featureimage:
+  label: Feature Image
+  type: select
+  options: query
+  query:
+    fetch: images
+    value: '{{filename}}'
+    text: '{{filename}}'
+      ```
 
 ## Miscellaneous Notes
 
@@ -64,7 +90,8 @@ By adding these, we can then reference them in the default.php and make sure con
 
 [Kirby Cookbook](https://getkirby.com/docs/cookbook"Kirby Cookbook")
 
-```c::set('debug', true);
+```
+c::set('debug', true);
  ```
 
 This adds a debug feature.
