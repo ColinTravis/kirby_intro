@@ -12,3 +12,8 @@ fields:
     label: Sub Text #what the panel sows
     type: textarea #the type that it is
     width: 1/2 #how big it's gonna be
+  date:
+    label: Date
+    type: date
+    width: 1/2
+    default: today
