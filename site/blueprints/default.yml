@@ -1,0 +1,14 @@
+title: Page
+pages: true
+files: true
+fields:
+  title:
+    label: Title
+    type:  text
+  text:
+    label: Text
+    type:  textarea
+  subtext: #can be named anything. Used to target in template file.
+    label: Sub Text #what the panel sows
+    type: textarea #the type that it is
+    width: 1/2 #how big it's gonna be
