@@ -22,7 +22,7 @@ Obviously, plugins
 Where the custom templates or others are placed
 
 
-## Once the Server is running on PHP, access it with /panel
+### Once the Server is running on PHP, access it with /panel
 
 ## Creating a Template
 
@@ -44,10 +44,13 @@ Similar to the other one, this will add images.
 
 But! We can also add feature images easily.
 
+```php
 <?php echo $page->image($page->featureImage() ) ?>
+```
 
+```html
 <img src="<?php echo $page->image($page->featureImage())->url() ?>" alt="a feature image" />
-
+```
 
 ## Adding things to the panel
 In the _site/blueprints/default.yml_ file, you can add lines to add to the panel.
@@ -55,7 +58,8 @@ In the _site/blueprints/default.yml_ file, you can add lines to add to the panel
 This is all done in yaml, so indentation is **key**
 
 ```yaml
-subtext: #can be named anything. Used to target in template file.
+subtext:
+  #can be named anything. Used to target in template file.
   label: Sub Text #what the panel sows
   type: textarea #the type that it is
   width: 1/2 #how big it's gonna be
@@ -68,7 +72,7 @@ date:
 
 By adding these, we can then reference them in the default.php and make sure content is added.
 
-#####Here's a Way We Can Add the Option to Select Feature images
+#####Here's a Way We Can Add the Option to Select Feature images:
 
 ```yaml
 featureimage:
@@ -79,14 +83,14 @@ featureimage:
     fetch: images
     value: '{{filename}}'
     text: '{{filename}}'
-      ```
+```
 
 ## Styling
 Add a .css file to the `assets/css/templates` folder.
 
 Then, under the title of your `site/templates/default.php` file, insert:
 
-> <?php echo css('@auto') ?>
+> `<?php echo css('@auto') ?>`
 Template specific css files must be located in /assets/css/templates and named like the template.
 
 
@@ -97,8 +101,8 @@ Template specific css files must be located in /assets/css/templates and named l
 
 [Kirby Cookbook](https://getkirby.com/docs/cookbook"Kirby Cookbook")
 
-```
+```php
 c::set('debug', true);
- ```
+```
 
 This adds a debug feature.
