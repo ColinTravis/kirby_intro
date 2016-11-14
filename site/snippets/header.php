@@ -7,5 +7,10 @@
 
   <title><?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?></title>
 
+  <!-- <?php echo css('@auto') ?> -->
+
+  <?= css('@auto')?>
+  <!-- Shorthand for echo -->
+
 </head>
 <body>

@@ -1,1 +1,17 @@
 Title: Error
+
+----
+
+Text: It's done broke.
+
+----
+
+Subtext: 
+
+----
+
+Date: 2016-11-14
+
+----
+
+Featureimage: 

@@ -1,0 +1,17 @@
+title: Neat-o
+# Set permissions below
+pages: true
+files: true
+options:
+  preview: true
+  status: true
+  template: true
+  url: true
+  delete: true
+fields:
+  title:
+    label: Page Title
+    type: text
+  text:
+    label: Text
+    type: textarea

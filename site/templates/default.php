@@ -20,6 +20,8 @@
 
  <img src="<?php echo $page->image($page->featureImage())->url() ?>" alt="a feature image" />
 
+ <!-- This is the HTML option of it -->
+
 <!-- Add subtext custom field -->
 <?php echo $page->subtext() ?>
 

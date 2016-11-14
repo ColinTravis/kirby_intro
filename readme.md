@@ -44,13 +44,10 @@ Similar to the other one, this will add images.
 
 But! We can also add feature images easily.
 
-<?php echo $page->featureImage() ?>
-
-<!-- Featured Image (Gets a specific image from the page. The image is the filename that is placed into the code, and the filename of course comes from the panel.) -->
-##### YAML example <a id="yaml"></a>](#featureimage)
 <?php echo $page->image($page->featureImage() ) ?>
 
 <img src="<?php echo $page->image($page->featureImage())->url() ?>" alt="a feature image" />
+
 
 ## Adding things to the panel
 In the _site/blueprints/default.yml_ file, you can add lines to add to the panel.
@@ -71,7 +68,7 @@ date:
 
 By adding these, we can then reference them in the default.php and make sure content is added.
 
-##### [Here's a Way We Can Add the Option to Select Feature images <a id="featureimage"></a>](#yaml)
+#####Here's a Way We Can Add the Option to Select Feature images
 
 ```yaml
 featureimage:
@@ -83,6 +80,16 @@ featureimage:
     value: '{{filename}}'
     text: '{{filename}}'
       ```
+
+## Styling
+Add a .css file to the `assets/css/templates` folder.
+
+Then, under the title of your `site/templates/default.php` file, insert:
+
+> <?php echo css('@auto') ?>
+Template specific css files must be located in /assets/css/templates and named like the template.
+
+
 
 ## Miscellaneous Notes
 
