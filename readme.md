@@ -2,10 +2,10 @@
 
 ## Folder Structure
 ###Assets Folder
-This is where all the images/fonts/external files/etc. go.
+This is where all the images/fonts/external files/etc go.
 
 ###Content folder
-This is where all of the content goes, duh..
+This is where all of the content goes, _duh.._
 
 When pages are manipulated in the admin panel, Kirby just renames folders and moves things round.
 
@@ -16,7 +16,7 @@ The actual configuration of the site.
 Defines the structure of the page. A lot of YAML that explains pages.
 
 ###### Plugins
-Obviously, plugins
+Obviously, plugins.
 
 ###### Templates
 Where the custom templates or others are placed
