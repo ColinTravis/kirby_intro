@@ -31,12 +31,14 @@ Where the custom templates or others are placed
 We're going to add a p tag to it.
 
 ```php
+// PHP
 <?php echo $page->text()->kirbytext() ?>
 ```
 
 This tells kirby to insert information from the **"text"** field that is pulled from the YAML file in blueprints. Kirbytext uses a markdown language, making it easier to format.
 
 ```php
+// PHP
 <?php echo $page->images() ?>
 ```
 
@@ -45,10 +47,12 @@ Similar to the other one, this will add images.
 But! We can also add feature images easily.
 
 ```php
+// PHP
 <?php echo $page->image($page->featureImage() ) ?>
 ```
 
 ```html
+<!-- HTML -->
 <img src="<?php echo $page->image($page->featureImage())->url() ?>" alt="a feature image" />
 ```
 
@@ -58,6 +62,7 @@ In the _site/blueprints/default.yml_ file, you can add lines to add to the panel
 This is all done in yaml, so indentation is **key**
 
 ```yaml
+# YAML
 subtext:
   #can be named anything. Used to target in template file.
   label: Sub Text #what the panel sows
@@ -75,6 +80,7 @@ By adding these, we can then reference them in the default.php and make sure con
 #####Here's a Way We Can Add the Option to Select Feature images:
 
 ```yaml
+#YAML
 featureimage:
   label: Feature Image
   type: select
@@ -90,8 +96,11 @@ Add a .css file to the `assets/css/templates` folder.
 
 Then, under the title of your `site/templates/default.php` file, insert:
 
-> `<?php echo css('@auto') ?>`
-Template specific css files must be located in /assets/css/templates and named like the template.
+```php
+// PHP
+<?php echo css('@auto') ?>
+```
+>Template specific css files must be located in /assets/css/templates and named like the template.
 
 
 
