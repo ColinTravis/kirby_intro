@@ -56,6 +56,19 @@ But! We can also add feature images easily.
 <img src="<?php echo $page->image($page->featureImage())->url() ?>" alt="a feature image" />
 ```
 
+While we're on the topic of images, it's also possible to resize them.
+By adding:
+
+```php
+<?php foreach ($page->images() as $editableImage): ?>
+  <?php echo $editableImage->resize(200,200,10) ?>
+
+<?php endforeach ?>
+```
+
+We create a for-loop that looks for images, and then reposts them, resizing them to _200 x 200_ with a quality of _10_
+
+
 ## Adding things to the panel
 In the _site/blueprints/default.yml_ file, you can add lines to add to the panel.
 
@@ -113,5 +126,7 @@ Then, under the title of your `site/templates/default.php` file, insert:
 ```php
 c::set('debug', true);
 ```
+
+Add this to _config/config.php_
 
 This adds a debug feature that you'll see when your code breaks. It looks a lot prettier than an error page.

@@ -1,0 +1,21 @@
+Title: subpage1
+
+----
+
+Text: 
+
+----
+
+Subtext: 
+
+----
+
+Date: 2016-11-21
+
+----
+
+Featureimage: thumbs-and-ammo-13.jpg
+
+----
+
+Tags: subpage

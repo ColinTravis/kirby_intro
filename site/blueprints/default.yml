@@ -25,3 +25,6 @@ fields:
       fetch: images
       value: '{{filename}}'
       text: '{{filename}}'
+  tags:
+    label: tags
+    type: tags

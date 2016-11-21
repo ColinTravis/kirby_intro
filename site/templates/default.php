@@ -16,13 +16,34 @@
  <!-- Curently, the problem is that it's defaulting to the number of seconds after Linux Epoch (jan 1 1970)-->
 
  <!-- Featured Image (Gets a specific image from the page. The image is the filename that is placed into the code, and the filename of course comes from the panel.) -->
+ <h3>Featured Image</h3>
  <?php echo $page->image($page->featureImage() ) ?>
-
- <img src="<?php echo $page->image($page->featureImage())->url() ?>" alt="a feature image" />
 
  <!-- This is the HTML option of it -->
 
 <!-- Add subtext custom field -->
+<br>
 <?php echo $page->subtext() ?>
+
+<h3>Sizing Images, 200x200, bad Quality</h3>
+<?php foreach ($page->images() as $editableImage): ?>
+  <?php echo $editableImage->resize(200,200,10) ?>
+
+<?php endforeach ?>
+
+<h3>Load images from child Pages</h3>
+<?php foreach($page->children() as $childpage ): ?>
+  <?php echo $childpage->images() ?>
+<?php endforeach ?>
+
+<h3>Children of the page tagged 'subpage'</h3>
+<!-- https://getkirby.com/docs/cookbook/tags -->
+<ul class='tagMenu'>
+  <?php foreach($page->children()->filterBy('tags', 'subPage', ',')  as $subPage ): ?>
+    <li>
+      <a href="<?php echo $subPage->url() ?>"><?php echo $subPage->title() ?></a>
+    </li>
+<?php endforeach ?>
+</ul>
 
 <?php snippet('footer') ?>

@@ -1,4 +1,4 @@
-Title: Page Title
+Title: Home
 
 ----
 
@@ -14,4 +14,8 @@ Date: 2016-11-16
 
 ----
 
-Featureimage: x_files-fox.jpg
+Featureimage: triangle-shape.jpg
+
+----
+
+Tags: intro
