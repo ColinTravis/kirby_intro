@@ -4,15 +4,15 @@
 
 
 ## Folder Structure
-###Assets Folder
+### Assets Folder
 This is where all the images/fonts/external files/etc go.
 
-###Content folder
+### Content folder
 This is where all of the content goes, _duh.._
 
 When pages are manipulated in the admin panel, Kirby just renames folders and moves things round.
 
-###Site folder
+### Site folder
 The actual configuration of the site.
 
 ###### Blueprints
@@ -90,7 +90,7 @@ date:
 
 By adding these, we can then reference them in the default.php and make sure content is added.
 
-#####Here's a Way We Can Add the Option to Select Feature images:
+##### Here's a Way We Can Add the Option to Select Feature images:
 
 ```yaml
 #YAML
